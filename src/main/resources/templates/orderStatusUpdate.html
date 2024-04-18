@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Status Update</title>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2>Order Status: <span th:text="${orderStatus}">Pending</span></h2>
+    <p>Update the status of order #<span th:text="${orderId}">12345</span> (This is a placeholder order ID, replace with actual logic):</p>
+    <div class="btn-group">
+        <a th:href="@{/updateStatus/{status}(status=order picked up)}" class="btn btn-primary">Order Picked</a>
+        <a th:href="@{/updateStatus/{status}(status=on the way)}" class="btn btn-warning">On The Way</a>
+		<a th:href="@{/updateStatus/{status}(status=delivered)}" class="btn btn-success">Delivered</a>
+    </div>
+</div>
+
+</body>
+</html>

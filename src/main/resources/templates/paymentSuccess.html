@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <title>Payment Successful</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid">
+        </div>
+</nav>
+
+<div class="container mt-4">
+    <h1>Payment Successful!</h1>
+    <p>Thank you for shopping with Zepto!</p>
+    <p>Your order is confirmed and will be processed shortly.</p>
+    <ul>
+        <li>Order Status: Processing</li>
+        <li>Delivery Driver: Assigned (Details will be emailed shortly)</li>
+    </ul>
+    <a th:href="@{/}" class="btn btn-primary">Continue Shopping</a>
+    <a th:href="@{/track-order}" class="btn btn-secondary">Track Your Order</a>
+</div>
+
+</body>
+</html>
