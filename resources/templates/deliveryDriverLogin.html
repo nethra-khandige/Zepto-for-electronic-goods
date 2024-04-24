@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Delivery Driver Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(168, 163, 220); /* Light Lavender color */
+            display: flex; /* Allow vertical centering */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* Set minimum viewport height */
+        }
+
+        .container {
+            max-width: 400px; /* Limit container width */
+        }
+
+        .form-group {
+            margin-bottom: 1rem; /* Add some spacing between form elements */
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Delivery Driver Login</h2>
+            <p>Please enter your ID and name to login.</p>
+            <form th:action="@{/driver/login}" method="post">
+                <div class="form-group">
+                    <label for="driverId">Driver ID</label>
+                    <input type="number" name="driverId" id="driverId" placeholder="Your Driver ID" class="form-control form-control-lg">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="form-control form-control-lg">
+                </div>
+                <div th:if="${param.error}" class="alert alert-error text-danger">
+                    Invalid ID or name.
+                </div>
+                <input type="submit" value="Login" class="btn btn-primary btn-block">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
